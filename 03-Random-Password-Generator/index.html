@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Password Generator</h1>
+
+      <div class="password-display" id="passwordDisplay">
+        <span id="passwordText">Your password will appear here</span>
+        <button id="copyPassword" class="copy-btn">Copy</button>
+      </div>
+
+      <div class="length-container">
+        <span class="length-label"
+          >LENGTH: <span class="length-value" id="lengthValue">16</span></span
+        >
+
+        <div class="slider-container">
+          <input
+            type="range"
+            min="4"
+            max="32"
+            value="16"
+            class="slider"
+            id="lengthSlider"
+          />
+          <div class="min-max">
+            <span>4</span>
+            <span>32</span>
+          </div>
+        </div>
+      </div>
+
+      <span class="settings-label">SETTINGS</span>
+
+      <div class="setting">
+        <span>Include Uppercase</span>
+        <label class="toggle">
+          <input type="checkbox" id="uppercase" checked />
+          <span class="slider-toggle"></span>
+        </label>
+      </div>
+
+      <div class="setting">
+        <span>Include Lowercase</span>
+        <label class="toggle">
+          <input type="checkbox" id="lowercase" checked />
+          <span class="slider-toggle"></span>
+        </label>
+      </div>
+
+      <div class="setting">
+        <span>Include Numbers</span>
+        <label class="toggle">
+          <input type="checkbox" id="numbers" checked />
+          <span class="slider-toggle"></span>
+        </label>
+      </div>
+
+      <div class="setting">
+        <span>Include Symbols</span>
+        <label class="toggle">
+          <input type="checkbox" id="symbols" />
+          <span class="slider-toggle"></span>
+        </label>
+      </div>
+
+      <button class="submit-btn" id="generatePassword">
+        GENERATE PASSWORD
+      </button>
+    </div>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
