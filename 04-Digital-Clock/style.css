@@ -1,0 +1,32 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.glass-card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 40px 80px;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+#clock {
+    font-size: 80px;
+    color: #ffffff;
+    letter-spacing: 4px;
+    text-shadow: 0 0 10px #00ffc3, 0 0 20px #00ffc3, 0 0 30px #00ffc3;
+    transition: all 0.2s ease-in-out;
+}
