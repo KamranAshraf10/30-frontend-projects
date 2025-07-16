@@ -18,12 +18,12 @@ document.addEventListener("DOMContentLoaded", () => {
   const numberChars = "0123456789";
   const symbolChars = "!@#$%^&*()_+-=[]{}|;:,.<>?";
 
-  //   update length on change
+  // update length on change
   lengthSlider.addEventListener("input", function () {
     lengthValueDisplay.textContent = this.value;
   });
 
-  //   Genrate Pass Function
+  // Generate Pass Function
   function generatePassword() {
     const length = lengthSlider.value;
     let charset = "";
@@ -52,10 +52,10 @@ document.addEventListener("DOMContentLoaded", () => {
     passwordDisplay.style.color = "";
   }
 
-  //   Event listner for Generate button
+  // Event listener for Generate button
   generateBtn.addEventListener("click", generatePassword);
 
-  //   Event listner for  Copy button
+  // Event listener for  Copy button
   copyBtn.addEventListener("click", () => {
     const password = passwordText.textContent.trim();
 
