@@ -126,7 +126,6 @@ nav {
 
 .hamburger[data-expanded="true"] span:nth-child(3)  {
     transform: rotate(-45deg);
-    /* top: 10px; */
 }
 
 a:focus-visible,
@@ -171,8 +170,5 @@ button:focus-visible {
     .nav-links a::after {
         height: 3px;
     }
-
-    
-
 
 }
