@@ -1,0 +1,288 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap");
+
+:root {
+  --primary-color: #2563eb;
+  --text-color: #1e293b;
+  --bg-color-white: #ffffff;
+  --transition-speed: 0.3s;
+  --color-white-100: hsl(206, 5%, 100%);
+  --color-white-200: hsl(206, 5%, 90%);
+  --color-black-500: hsl(216, 22%, 4%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  background-color: var(--color-black-500);
+  color: var(--color-white-100);
+  line-height: 1.6;
+}
+
+
+nav {
+  background-color: var(--color-black-500);
+  padding: 2rem 0 0 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-container {
+  max-width: 1400px;
+  padding: 0 2rem;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  letter-spacing: 0.5px;
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: var(--color-white-100);
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  gap: 4rem;
+  list-style: none;
+}
+
+.nav-link {
+  color: var(--color-white-100);
+  text-decoration: none;
+  font-size: 1.3rem;
+  position: relative;
+  transition: color var(--transition-speed);
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+  color: var(--primary-color);
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--primary-color);
+  transition: width var(--transition-speed);
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.hamburger {
+  display: none;
+  width: 30px;
+  height: 24px;
+  border: none;
+  background: transparent;
+  position: relative;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.hamburger span {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: var(--color-white-100);
+  border-radius: 3px;
+  transition: all var(--transition-speed);
+}
+
+.hamburger span:nth-child(1) { top: 0; }
+.hamburger span:nth-child(2),
+.hamburger span:nth-child(3) { top: 10px; }
+.hamburger span:nth-child(4) { top: 20px; }
+
+.hamburger[data-expanded="true"] span:nth-child(1),
+.hamburger[data-expanded="true"] span:nth-child(4) {
+  width: 0;
+  left: 50%;
+  top: 10px;
+}
+
+.hamburger[data-expanded="true"] span:nth-child(2) {
+  transform: rotate(45deg);
+}
+
+.hamburger[data-expanded="true"] span:nth-child(3) {
+  transform: rotate(-45deg);
+}
+
+
+.main {
+  padding: 4rem 1rem;
+}
+
+.section {
+  padding: 4rem 0;
+}
+
+.container {
+  max-width: 1400px;
+  margin: auto;
+  padding: 0 2rem;
+}
+
+.banner-column {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr 0.3fr;
+  align-items: center;
+  gap: 6rem;
+  position: relative;
+}
+
+
+
+.banner-inner {
+  order: 1;
+}
+
+.banner-image {
+  order: 2;
+  max-width: 100%;
+  border-radius: 1rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+  display: block;
+  margin: 0 auto;
+}
+
+.banner-link {
+  order: 3;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+  height: 300px;
+  margin-left: auto;
+}
+
+.banner-link a {
+  color: var(--color-white-100);
+  font-size: 1.7rem;
+  transition: color 0.3s;
+}
+.banner-link a:hover {
+  color: var(--primary-color);
+}
+
+.title-large {
+  font-size: 4rem;
+  font-weight: 900;
+  line-height: 1.1;
+  margin-bottom: 2rem;
+  font-family: "Rubik", sans-serif;
+}
+
+.text-base {
+  font-size: 1.25rem;
+  color: var(--color-white-200);
+  margin-bottom: 2.5rem;
+  font-family: "Rubik", sans-serif;
+}
+
+.btn-primary {
+  background: #181818;
+  color: #fff;
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  font-weight: 700;
+  font-size: 1.1rem;
+  border: none;
+  transition: background 0.2s;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  box-shadow: none;
+  font-family: "Rubik", sans-serif;
+}
+
+.btn-primary:hover {
+  background: var(--primary-color);
+  color: #fff;
+}
+
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+  .nav-links {
+    position: fixed;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--color-black-500);
+    transform: translateX(100%);
+    transition: transform var(--transition-speed);
+    z-index: 999;
+  }
+  .nav-links[data-active="true"] {
+    transform: translateX(0);
+  }
+  .nav-link {
+    font-size: 1.5rem;
+    background-color: var(--color-black-500);
+    color: var(--color-white-100);
+    width: 100vw;
+    text-align: center;
+    padding: 1rem 0;
+    border-radius: 0;
+  }
+}
+
+@media (max-width: 900px) {
+  .container {
+    padding: 0 1rem;
+  }
+  
+  .banner-column {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 1rem 0;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .banner-inner {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  .banner-image {
+    margin-bottom: 2rem;
+    max-width: 80vw;
+  }
+
+  .banner-link {
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+    height: auto;
+    margin: 2rem auto 0 auto;
+    justify-content: center;
+    align-items: center;
+  }
+}
