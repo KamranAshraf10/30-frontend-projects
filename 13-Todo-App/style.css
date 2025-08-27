@@ -1,0 +1,129 @@
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background: #4e4cff;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    width: 400px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    background: white;
+    border-radius: 10px;
+}
+
+.newTask {
+    position: relative;
+    padding: 30px 20px;
+}
+
+.newTask input {
+    width: 80%;
+    height: 45px;
+    font-size: 15px;
+    border: 2px solid #d1d3d4;
+    padding: 12px;
+    color: #111111;
+    position: relative;
+    border-radius: 5px;
+    transition: border-color 0.3s ease;
+}
+
+.newTask input:focus {
+    outline: none;
+    border-color: #4e4cff;
+}
+
+.newTask button {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 45px;
+    height: 45px;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #4e4cff;
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.3s ease;
+}
+
+.newTask button:hover {
+    background-color: #3a3bbf;
+}
+
+#tasks {
+    background-color: #ffffff;
+    padding: 30px 20px;
+    margin-top: 5px;
+    border-radius: 10px;
+    width: 100%;
+    position: relative;
+}
+
+.task {
+    background-color: #e5e5e5;
+    height: 50px;
+    margin-bottom: 8px;
+    padding-left: 5px;
+    display: flex;
+    border-radius: 5px;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.task:hover {
+    background-color: #d3d3d3;
+}
+
+.task span {
+    font-size: 15px;
+    font-weight: 400;
+    display: inline-block;
+    flex-grow: 1;
+}
+
+.delete {
+    background-color: red;
+    color: #ffffff;
+    height: 100%;
+    width: 50px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.3s ease;
+}
+
+.delete:hover {
+    background-color: #b33030;
+}
+
+.taskCheck {
+    display: flex;
+    align-items: center;
+}
+
+.taskCheckbox {
+    height: 25px;
+    width: 25px;
+    margin-right: 5px;
+}
+
+.taskCheckbox:checked + #taskname {
+    text-decoration: line-through;
+}
