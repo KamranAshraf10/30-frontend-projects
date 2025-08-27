@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OTP Verification UI</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <!-- Youtube.com/@KamranAshraf10 -->
+</head>
+<body>
+    <div class="container">
+        <div class="lock-icon">
+            <i class="fas fa-lock"></i>
+        </div>
+        
+        <h1>OTP Verification</h1>
+        <p class="subtitle">Enter the 4-digit code sent to your mobile number</p>
+        
+        <div class="otp-container">
+            <input type="text" class="otp-input" maxlength="1" data-index="0">
+            <input type="text" class="otp-input" maxlength="1" data-index="1">
+            <input type="text" class="otp-input" maxlength="1" data-index="2">
+            <input type="text" class="otp-input" maxlength="1" data-index="3">
+        </div>
+        
+        <button class="verify-btn">Verify OTP</button>
+        
+        <div class="resend">
+            Didn't receive code? <a href="#">Resend OTP</a>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
