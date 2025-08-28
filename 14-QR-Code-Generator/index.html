@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>QR Code Generator</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" 
+        integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+        crossorigin="anonymous" />
+
+    <link rel="stylesheet" href="style.css">
+    <!-- Youtube.com/@KamranAshraf10 -->
+</head>
+<body>
+    <form>
+        <h2 class="heading">QR Code Generator</h2>
+        <input type="url" id="website" name="website" placeholder="https://codingtorque.com" required />
+        <div id="qrcode-container" style="display:none;">
+            <div id="qrcode" class="qrcode"></div>
+        </div>
+        <button type="button" class="generateBtn" onclick="generateQRCode()">Generate QR Code</button>
+    </form>
+
+    <!-- External QR Code Library -->
+    <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
