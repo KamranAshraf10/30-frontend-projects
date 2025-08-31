@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Quiz App — TheClassic</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Youtube.com/@KamranAshraf10 -->
+</head>
+<body>
+  <main class="app">
+    <section class="start-screen">
+      <button id="start-button" class="btn btn-primary">Start</button>
+    </section>
+
+    <section id="display-container" aria-live="polite">
+      <header class="header">
+        <div class="number-of-count">
+          <span class="number-of-question">1 of 3 questions</span>
+        </div>
+        <div class="timer-div" aria-label="Timer">
+          <img
+            src="https://uxwing.com/wp-content/themes/uxwing/download/time-and-date/stopwatch-icon.png"
+            width="20"
+            height="20"
+            alt=""
+          />
+          <span class="time-left">10s</span>
+        </div>
+      </header>
+
+      <div id="container" class="quiz-container" role="list">
+        <!-- questions and options will be injected here -->
+      </div>
+
+      <button id="next-button" class="btn">Next</button>
+    </section>
+
+    <section class="score-container hide" aria-live="polite">
+      <div id="user-score" class="score">Demo Score</div>
+      <button id="restart" class="btn btn-primary">Restart</button>
+    </section>
+  </main>
+
+  <noscript>Please enable JavaScript to use this quiz.</noscript>
+  <script src="script.js" defer></script>
+</body>
+</html>
