@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Captcha Generator</title>
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+        integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+        crossorigin="anonymous" />
+  <link rel="stylesheet" href="style.css" />
+  <!-- Youtube.com/@KamranAshraf10 -->
+</head>
+<body>
+  <main class="container">
+    <div class="top-row">
+      <div id="captcha" aria-label="CAPTCHA image"></div>
+      <button class="regenerateCaptchaBtn" id="regen" type="button" aria-label="Regenerate CAPTCHA">
+        <i class="fas fa-redo" aria-hidden="true"></i>
+      </button>
+    </div>
+
+    <input type="text" id="cpatchaTextBox" placeholder="Enter Captcha" autocomplete="off" />
+    <button id="submit-btn" type="button">Submit</button>
+  </main>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
