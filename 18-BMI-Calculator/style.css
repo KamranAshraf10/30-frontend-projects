@@ -1,0 +1,217 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+  background-color: #f4f4f9;
+}
+
+.container {
+  padding: 20px;
+  padding-top: 25px;
+}
+
+.main {
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  width: 70vh;
+  height: 88vh;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+  background-color: #9c27b0;
+  padding: 0;
+  text-align: center;
+  border-radius: 20px 10px 0 0;
+}
+
+.logo {
+  width: 20%;
+  height: auto;
+  padding-top: 20px;
+}
+
+.heading {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  padding-bottom: 5px;
+  font-weight: 600;
+  font-size: 30px;
+  color: #fff;
+}
+
+.field-container {
+  display: flex;
+  flex-direction: row;
+  gap: 60px;
+  justify-content: center;
+  align-items: center;
+}
+
+.input-fields {
+  display: flex;
+  flex-direction: column-reverse;
+  text-align: center;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.input-fields label {
+  width: 15vh;
+  text-align: center;
+  font-size: 16px;
+  color: #333;
+  display: block;
+  /* margin-bottom: 5px; */
+  padding: 15px;
+}
+
+.input-fields input {
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  border-bottom: 2px solid #9c27b0; /* Purple border */
+  width: 15vh;
+  padding: 15px;
+  font-size: 22px;
+  text-align: center;
+  outline: none;
+  transition: border 0.3s;
+  caret-color: #9c27b0;
+  color: #9c27b0;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 35px;
+  margin-top: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.action-buttons .btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  border: 2px solid #9c27b0;
+  background-color: transparent;
+  color: #9c27b0; /* Green for calculate */
+  transition: background-color 0.3s, color 0.3s;
+  width: 120px;
+  height: 35px;
+  text-align: center;
+}
+.action-buttons .btn.reset-btn {
+  color: #9c27b0; /* Red for reset */
+}
+
+.action-buttons .btn:hover {
+  background-color: #9c27b0;
+  color: white; /* White text on hover */
+}
+
+.action-buttons .btn.reset-btn:hover {
+  background-color: #9c27b0;
+  color: white;
+}
+
+.results {
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+
+.results .heading1 {
+  color: #9c27b0;
+  font-size: 36px;
+  font-weight: bolder;
+}
+
+/* .results .para1 {
+  padding-bottom: 10px;
+} */
+
+.bmi-value {
+  margin-top: 5px;
+  font-size: 30px;
+  font-weight: bold;
+  color: #333;
+}
+
+.bmi-status {
+  font-size: 18px;
+  /* color: #9c27b0;  */
+  margin-top: 5px;
+}
+
+.bmi-range {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+  font-size: 15px;
+  font-weight: 400;
+  color: #000000;
+}
+
+.bmi-range span {
+  flex: 1;
+  text-align: center;
+}
+
+.bmi-range-values {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  color: #222121;
+  margin-top: 5px;
+}
+
+.bmi-range-values span {
+  flex: 1;
+  text-align: center;
+}
+
+/* .bmi-range-bar {
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(to right, #ffeb3b, #4caf50, #ff9800, #f44336);
+  border-radius: 5px;
+  margin-top: 20px;
+} */
+
+.bmi-range-bar {
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(
+    to right,
+    #ffeb3b 0%,
+    /* Yellow for underweight */ #ffeb3b 25%,
+    /* Yellow to 25% */ #4caf50 25%,
+    /* Green for healthy */ #4caf50 50%,
+    /* Green to 50% */ #ff9800 50%,
+    /* Orange for overweight */ #ff9800 75%,
+    /* Orange to 75% */ #f44336 75%,
+    /* Red for obese */ #f44336 100% /* Red till the end */
+  );
+  border-radius: 5px;
+  margin-top: 10px;
+}
