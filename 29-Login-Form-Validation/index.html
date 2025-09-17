@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Form with Shake Animation</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Youtube.com/@KamranAshraf10 -->
+</head>
+<body>
+  <div class="login-box">
+    <h2>Login</h2>
+    <form id="loginForm">
+      <div class="input-group" id="email-group">
+        <input type="email" id="email" placeholder="Email" required>
+        <span class="error-message" id="email-error" aria-live="assertive">Email can't be blank</span>
+      </div>
+      <div class="input-group" id="password-group">
+        <input type="password" id="password" placeholder="Password" required>
+        <span class="error-message" id="password-error" aria-live="assertive">Password can't be blank</span>
+      </div>
+      <button type="submit">Login</button>
+    </form>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script>
+    if (typeof jQuery === 'undefined') {
+      console.error('jQuery failed to load');
+    } else {
+      console.log('jQuery loaded successfully');
+    }
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>
